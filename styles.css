@@ -1,0 +1,771 @@
+:root {
+  --color-empresarial: #069898;
+  --color-facebook: #4267b2;
+  --color-instagram: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+
+  --baloo: font-family: 'Baloo Tamma 2', cursive;
+
+
+}
+/* Globales */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+  /* font-family: var(--baloo); */
+  font-family: 'Baloo Tamma 2', cursive;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.center-text{
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  width: 95vw;
+}
+/* ---Fin Globales--- */
+
+/* Botones */
+
+.btn {
+  border: 0.1rem solid var(--color-empresarial);
+  padding: 0.8rem 1.6rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.btn-transparente {
+  background-color: transparent;
+  color: var(--color-empresarial);
+}
+
+.btn-empresarial {
+  color: #fff;
+  background-color: var(--color-empresarial);
+}
+
+.resalta{
+  /* transform: scale(2); */
+  animation: resaltar 1s infinite ease-in-out;
+}
+@keyframes resaltar{
+  /* 0%{
+    transform: scale(1);
+  } */
+  50%{
+    transform: scale(1.05);
+  }
+
+  /* 100%{
+    transform: scale(1);
+  } */
+}
+
+/* .call-to-action:hover{
+  animation: 0 ;
+} */
+
+
+/* ---Fin Botones--- */
+
+@media(min-width: 768px){
+
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+  }
+
+
+
+
+}
+
+
+
+
+
+
+
+.desktop-header {
+  display: none;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.mobile-header {
+  display: block;
+  background-color: var(--color-empresarial);
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  z-index:10;
+  padding: 0.75rem 0;
+}
+
+.mobile-header > .container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.mobile-header .logo {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  margin: 2px 5px;
+  border-radius: 9px;
+}
+
+.hamburger-navbar {
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  right: -50%;
+  width: 12rem;
+  height: auto;
+  z-index: 10;
+  background-color: var(--color-empresarial);
+}
+
+.hamburger-navbar > ul {
+  padding: 0 0;
+  text-align: center;
+  list-style: none;
+}
+
+.hamburger-navbar > ul li {
+  padding: 0.75rem 0;
+}
+.hamburger-navbar > ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.open {
+  display: flex;
+  right: 0%;
+  /* opacity: 0; */
+  animation: appear 0.3s ease-in;
+}
+
+@keyframes appear{
+
+  0%{
+
+    opacity: 0;
+
+  }
+  100%{
+
+    opacity: 1;
+
+  }
+
+
+}
+
+
+
+.homepage {
+  width: 100%;
+  height: 100vh;
+  background: url(img/panel_solar_0.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+.homepage > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.homepage-headline {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+
+
+@media (min-width: 768px) {
+  .container {
+    margin: 0 auto;
+    width: 85vw;
+  }
+
+  .mobile-header {
+    display: none;
+  }
+
+  .desktop-header {
+    display: block;
+  }
+
+  .desktop-header > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .desktop-header > .container > .logo {
+    width: 12rem;
+  }
+
+  .desktop-header > .container > .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* justify-content: space-between; */
+  }
+
+  .fono {
+    color: var(--color-empresarial);
+  }
+
+  .social-media {
+    /* color: var(--color-facebook); */
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 0 0.05rem;
+  }
+
+  .fab.fa-facebook-square {
+    color: var(--color-facebook);
+  }
+  .fab.fa-instagram {
+    /* color: var(--color-instagram); */
+    color: transparent;
+    background: radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
+    background: -webkit-radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  .desktop-nav {
+    display: block;
+    position: -webkit-sticky;
+    position:sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--color-empresarial);
+  }
+
+  .sticky-navbar {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+  }
+
+  /* .sticky-navbar + .homepage {
+    margin-top: 55px;
+  }
+
+  .sticky-navbar + .historia {
+    margin-top: 55px;
+  } */
+
+  .desktop-nav > .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+    /* height: 5vh; */
+  }
+
+  .desktop-nav > .container a {
+    margin: 0.4rem 1rem;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    /* border: 2px solid #FFF; */
+    border-radius: 2rem;
+  }
+
+  .desktop-nav > .container a:hover {
+    color: var(--color-empresarial);
+    background-color: #fff;
+  }
+
+  /* .social-media{
+
+    color: var(--color-empresarial);
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 0 0.05rem;
+
+} */
+
+
+  .homepage {
+    height: 75vh;
+  }
+
+  .homepage-headline {
+    font-size: 1.3rem;
+  }
+
+
+
+}
+
+
+/* Sección Quienes Somos */
+.historia{
+
+  padding: 3.8rem 0 0.5rem 0 ;
+  background-color: #808080a9;
+
+}
+
+.mision{
+
+  text-align: center;
+}
+
+.mision> h2{
+
+  margin-bottom: 1rem;
+}
+
+.vision{
+  margin-top: 2rem;
+  text-align: center;
+
+}
+
+.vision > h2{
+  margin-bottom: 1rem;
+
+}
+
+.vision + h2{
+  margin: 2rem 0;
+  text-align: center;
+}
+
+
+
+@media ( min-width: 768px){
+
+
+
+  .historia{
+    padding: 2rem 0;
+  
+  }
+
+
+
+
+}
+/* -------- */
+
+/* Servicios */
+
+.servicios{
+  background-color: lightgray;
+  padding: 1rem 0;
+    
+}
+
+.servicios-heading{
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  
+  text-align: center;
+  width: 100%;
+}
+
+.icono-servicios{
+
+  color: var(--color-empresarial);
+  font-size: 7rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+.icono-servicios:hover{
+  transform: scale(1.05);
+}
+
+
+
+.servicios-wrapper{
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.caja-servicio{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem 1rem;
+  margin: 0 1rem ;
+  min-height: 17rem;
+  flex: 0 1 15rem;
+
+  margin-bottom: 2rem;
+  /* border: 2px solid #000 */
+  /* height: ; */
+  border-radius: 20px;
+    background-color: #fff;
+}
+
+.caja-servicio p{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+
+
+@media ( min-width: 768px){
+
+  .servicios{
+    padding: 2rem 0;
+      
+  }
+
+  .servicios-heading{
+    margin-bottom: 2rem ;
+
+  }
+
+  .servicios-wrapper{
+    flex-direction: row;
+
+  
+  
+  }
+
+  .caja-servicio{
+    padding: 2rem 2rem;
+    margin: 0 1rem ;
+    height: 15rem;
+    flex: 0 1 25rem;
+  
+    margin-bottom: 2rem;
+    /* border: 2px solid #000; */
+    
+    /* height: ; */
+  }
+
+
+
+
+}
+
+/* Fin Servicios */
+
+
+/* Contacto */
+
+
+.contacto{
+  background-color: lightgray;
+  padding: 1rem 0;
+    
+}
+
+.contacto>.container{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+    
+}
+
+.contacto>.container>div{
+  padding: 1rem 0;
+  /* margin-bottom: 0; */
+}
+
+
+.ubicacion{
+
+  /* flex: 0 0 50%; */
+  width: 100%;
+}
+
+.mapa-ubicacion{
+  width: 100%;
+  /* height: 100%; */
+}
+
+.mapa-ubicacion iframe{
+  min-height: 20rem;
+  /* height: inherit;
+  width: inherit; */
+}
+
+.formulario-contacto{
+  
+  width: 100%;
+}
+
+
+
+.formulario-contacto input{
+  display: block;
+  height: 3rem ;
+  width: 100%;
+  margin: 0.3rem 0;
+  font-size: 1.4rem;
+  padding-left: 0.5rem;
+  border-radius: 5px;
+
+
+
+}
+
+.formulario-contacto textarea{
+  display: block;
+  height: 15rem ;
+  width: 100%;
+  font-size: 1.4rem;
+  padding-left: 0.5rem;
+  margin: 0.3rem 0!important;
+  border-radius: 5px;
+
+
+
+}
+
+.formulario-contacto button{
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  color: #fff;
+  padding: 0.5rem ;
+  background-color: var(--color-empresarial);
+  
+}
+
+
+
+
+@media (min-width: 768px) {
+
+  .contacto{
+
+    padding: 2rem 0;
+  
+  
+  }
+
+  .contacto>.container{
+    flex-direction: row;
+  }
+
+  .contacto>.container>div{
+    padding: 2rem 0;
+    /* margin-bottom: 0; */
+  }
+
+  .ubicacion{
+    margin-right: 1rem;
+    /* flex: 0 0 50%; */
+    /* height: 100%; */
+    width: 50%;
+  }
+
+  .mapa-ubicacion{
+    width: 100%;
+    /* height: 100%; */
+  }
+  
+  .mapa-ubicacion iframe{
+    height: 100%;
+    width: 100%;
+  }
+
+
+  .formulario-contacto{
+    margin-left: 1rem;
+    flex: 0 0 50%;
+    width: 50%;
+  }
+
+
+
+
+
+
+}
+
+/* Fin contacto */
+
+
+
+
+
+
+.site-footer {
+  background-color: var(--color-empresarial);
+  padding: 1rem 0;
+  /* height: 20vh; */
+}
+
+.site-footer > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-footer>.container>div{
+  margin: 0.5rem 0;
+}
+
+
+
+.footer-logo {
+  /* width: 33%; */
+  flex: 1;
+  color: #fff;
+  font-size: 0.8rem;
+  /* text-align: center; */
+}
+
+.footer-nav {
+  /* width: 33%; */
+  flex: 1.4;
+  text-align: center;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.footer-social-media {
+  flex: 1;
+  text-align: center;
+  /* width: 33%; */
+}
+
+.footer-social-media a {
+  margin: 0 0.1rem;
+}
+
+.site-footer .social-media {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.footer-mail{
+  margin-top: 0.4rem;
+  font-size: 1rem;
+  color: #fff;
+}
+
+
+
+@media (min-width: 768px) {
+
+  .site-footer {
+    padding: 3rem 0;
+  }
+
+  .site-footer > .container {
+    flex-direction: row;
+  }
+
+
+  .site-footer>.container>div{
+    margin: 0;
+  }
+
+
+
+
+  
+  .footer-nav a {
+    font-size: 1.0rem;
+    margin: 0 0.2rem;
+  }
+
+  .footer-nav a:hover{
+    text-decoration: underline;
+  }
+
+
+
+
+}
