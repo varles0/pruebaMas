@@ -39,6 +39,7 @@
 
 .timeline ul li:nth-child(odd) .date {
     padding-right: 0;
+    justify-content: flex-start;
 }
 
 .timeline ul li:nth-child(even) .content {
@@ -47,16 +48,28 @@
 
 .timeline ul li:nth-child(even) .date {
     padding-left: 0;
+    justify-content: flex-end;
+
 }
 
 .timeline ul li .date {
+    display: flex;
+    align-items: center;
     width: 50%;
     padding: 0 20px;
     font-weight: normal;
 }
+.timeline ul li .date img{
+    display: none;
+}
+
+
+
+
 
 .timeline ul li .date h4 {
-    background-color: lightgray;
+    display: inline;
+    background-color: rgb(172, 169, 169);
     width: 100px;
     text-align: center;
     padding: 5px 10px;
@@ -74,7 +87,7 @@
 
 .timeline ul li .content p {
     padding: 10px 5px;
-    background-color: lightgray;
+    background-color: rgba(199, 199, 199, 0.973);
     margin-top: 0;
     text-align: center;
     
@@ -101,6 +114,11 @@
 
 @media ( min-width: 768px){
 
+
+    .timeline ul li .date img{
+        display: inline-block;
+        width: 60%;
+    }
 
 /* PENDIENTE */
 
