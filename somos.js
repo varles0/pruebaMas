@@ -14,3 +14,4 @@ hamburgerBtn.addEventListener("click", () => {
     openedMenu = false;
   }
 });
+

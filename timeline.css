@@ -1,130 +1,183 @@
 .timeline {
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-    
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
 }
 
-.timeline ul{
-    padding: 0;
+.timeline ul {
+  padding: 0;
 }
 
 .timeline ul li {
-    margin-bottom: 50px;
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  margin-bottom: 50px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .point {
-    min-width: 20px;
-    height: 20px;
-    background-color: var(--color-empresarial);
-    border-radius: 100%;
-    z-index: 2;
-    border: 3px #333333 solid;
-    position: relative;
-    left: 1px;
+  min-width: 20px;
+  height: 20px;
+  /* background-color: var(--color-empresarial); */
+  background-color: var(--color-empresarial);
+  border-radius: 100%;
+  z-index: 2;
+  border: 0.2rem #333333 solid;
+  position: relative;
+  left: 1px;
 }
+/* 
+.light-point{
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.4;
+  min-width: 50px;
+  top: -100%;
+  left:-0%;
+  height: 50px;
+  background-color: rgba(226, 230, 31, 0.747);
+
+} */
 
 .timeline ul li .content {
-    width: 50%;
-    padding: 0 20px;
+  width: 50%;
+  padding: 0 5px;
 }
 
 .timeline ul li:nth-child(odd) .content {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 .timeline ul li:nth-child(odd) .date {
-    padding-right: 0;
-    justify-content: flex-start;
+
+  padding-right: 0;
+
+  
 }
 
 .timeline ul li:nth-child(even) .content {
-    padding-right: 0;
+  padding-right: 0;
 }
 
 .timeline ul li:nth-child(even) .date {
-    padding-left: 0;
-    justify-content: flex-end;
+  padding-left: 0;
 
 }
 
 .timeline ul li .date {
-    display: flex;
-    align-items: center;
-    width: 50%;
-    padding: 0 20px;
-    font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 0 5px;
+  font-weight: normal;
 }
-.timeline ul li .date img{
-    display: none;
+.timeline ul li .date img {
+  display: block;
+  /* width: 100%; */
 }
-
-
-
-
 
 .timeline ul li .date h4 {
-    display: inline;
-    background-color: rgb(172, 169, 169);
-    width: 100px;
-    text-align: center;
-    padding: 5px 10px;
-    border-radius: 10px;
+  display: block;
+  background-color: rgb(172, 169, 169);
+  width: 100px;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .timeline ul li .content h3 {
-    padding: 10px 20px;
-    background-color: var(--color-empresarial);
-    margin-bottom: 0;
-    text-align: center;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+  padding: 10px 20px;
+  background-color: var(--color-empresarial);
+  margin-bottom: 0;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .timeline ul li .content p {
-    padding: 10px 5px;
-    background-color: rgba(199, 199, 199, 0.973);
-    margin-top: 0;
-    text-align: center;
-    
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+  padding: 10px 5px;
+  background-color: rgba(199, 199, 199, 0.973);
+  margin-top: 0;
+  text-align: center;
+
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .timeline ul li:nth-child(even) {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .timeline ul li:nth-child(even) .date h4 {
-    float: right
+  float: right;
+}
+
+.timeline p{
+  font-size: 1rem;
+  line-height: 1.3rem; 
+  /* letter-spacing: 1px; */
+
 }
 
 .timeline::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 3px;
-    left: 50%;
-    background-color: #333333;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  left: 50%;
+  background-color: #333333;
 }
 
-@media ( min-width: 768px){
+@media (min-width: 768px) {
+  .timeline ul li .date img {
+    /* display: inline-block; */
+    width: 70%;
+  }
+  .timeline ul li .date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    padding: 0 10px;
+    font-weight: normal;
+  }
+
+  .timeline p{
+    font-size: 1.2rem;
+    line-height: 1.5rem; 
+    /* letter-spacing: 1px; */
+  
+  }
 
 
-    .timeline ul li .date img{
-        display: inline-block;
-        width: 60%;
-    }
 
-/* PENDIENTE */
+  .timeline ul li:nth-child(odd) .date {
+
+    flex-direction: row;
+    align-items: center;
+  }
+   
+  .timeline ul li:nth-child(even) .date {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .timeline ul li .date h4 {
+    margin-bottom: 0;
+  }
 
 
 
 
+
+
+
+  /* PENDIENTE */
 }
 
 /* @media (max-width: 800px) {

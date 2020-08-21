@@ -8,7 +8,10 @@
       href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Ruluko&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ruluko&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body id="inicio">
@@ -17,7 +20,13 @@
         <div class="logo"><img src="img/logo1.jpg" alt="" /></div>
         <div class="contact-info">
           <h2>Si tienes dudas, contáctanos!</h2>
-          <h2 class="fono">+56952516403<i class="social-media fab fa-whatsapp"></i></h2>
+          <h2 class="fono">
+            <a
+              target="_blank"
+              href="https://wa.me/56952516403?text=Algun%20mensaje%20aqui"
+              >+56952516403<i class="social-media fab fa-whatsapp"></i
+            ></a>
+          </h2>
 
           <div class="social-media-wrapper">
             <a
@@ -85,8 +94,8 @@
         </div>
 
         <div class="resalta call-to-action">
-          <a href="#" class="btn btn-empresarial resalta"
-            >Cotiza con nosotros!</a
+          <a id="cotizaya" href="#" class="btn btn-empresarial resalta"
+            >Inicia tu viaje con nosotros!</a
           >
         </div>
       </div>
@@ -100,22 +109,22 @@
         <div class="servicios-wrapper">
           <!-- <div>
             <i class="icono-servicios fas fa-wind"></i>
-            
-            
-            
-            
+          
           </div> -->
-
           <div class="caja-servicio">
-            <i class="icono-servicios fas fa-solar-panel"></i>
+            <div class="icono-servicio">
+              <img src="/img/energia-solar.svg" alt="" />
+            </div>
             <p>
-              Instalación de paneles solares para otorgar electricidad a una
-              parcela de algún sector rural.
+              Uso de paneles solares para otorgar electricidad a una parcela de
+              algún sector rural.
             </p>
           </div>
 
           <div class="caja-servicio">
-            <i class="icono-servicios fas fa-car-battery"></i>
+            <div class="icono-servicio">
+              <img src="/img/idea.svg" alt="" />
+            </div>
             <p>
               Instalación de focos interiores o exteriores con paneles
               fotovoltaicos para iluminar residencias.
@@ -123,7 +132,9 @@
           </div>
 
           <div class="caja-servicio">
-            <i class="icono-servicios fas fa-shower"></i>
+            <div class="icono-servicio">
+              <img src="/img/bomba.svg" alt="" />
+            </div>
             <p>
               Proveer de energía eléctrica a bombas de agua mediante paneles
               solares.
@@ -131,15 +142,19 @@
           </div>
 
           <div class="caja-servicio">
-            <i class="icono-servicios fas fa-shower"></i>
+            <div class="icono-servicio">
+              <img src="/img/molino-de-viento.svg" alt="" />
+            </div>
             <p>
-              Instalación de turbinas eólicas para usos industriales o
+              Implementación de turbinas eólicas para usos industriales o
               domiciliarios.
             </p>
           </div>
 
           <div class="caja-servicio">
-            <i class="icono-servicios fas fa-shower"></i>
+            <div class="icono-servicio">
+              <img src="/img/temperatura-de-agua.svg" alt="" />
+            </div>
             <p>
               Instalación de termos solares para la acumulación de agua
               caliente.
@@ -149,21 +164,74 @@
       </div>
     </main>
 
-    <!-- <section class="proyectos">
+    <section id="proyectos" class="proyectos">
       <div class="container">
         <div class="proyecto">
-          <div class="imagen-proyecto"></div>
-          <div class="descripcion-proyecto">
-            <h3>sdasdasd</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Architecto dolor vero ut nihil, numquam doloribus. Pariatur itaque
-              dicta iste. Aspernatur?
+          <h3 class="titulo-proyecto">
+            Instalación de sistema fotovoltaico OFF-GRID - Cruce Candelaria en
+            Quellon Chiloe
+          </h3>
+          <div class="contenido-proyecto">
+            <div class="imagen-proyecto">
+              <img src="/img/IMG_20190919_140513.png" alt="" />
+            </div>
+            <p class="parrafo-proyecto">
+              En este proyecto ofrecemos energía eléctrica limpia a un taller
+              textil para la confección y fabricación de telares y textiles
+              autóctonos de Chiloé. Este tipo de energía evita generar el
+              impacto negativo sobre el medio ambiente a diferencia de los
+              combustibles fósiles tales como el petróleo o el carbón. Hoy en
+              día, la quema de estos combustibles, lamentablemente, representa
+              el mayor porcentaje de la energía que se consume alrededor del
+              mundo.
+            </p>
+          </div>
+        </div>
+
+        <div class="proyecto">
+          <h3 class="titulo-proyecto">
+            Instalación fotovoltaica de almacén de secado de leña natural,
+            Sector Quemchi- Chiloé
+          </h3>
+          <div class="contenido-proyecto">
+            <div class="imagen-proyecto">
+              <img src="/img/instalacion 1.png" alt="" />
+            </div>
+            <p class="parrafo-proyecto">
+              En este proyecto podemos apreciar una instalación de paneles
+              fotovoltaicos que tiene como propósito otorgar energía a una
+              estructura de secado de leña natural. Como solución, brindamos
+              iluminación externa e interna al almacén. Con esta instalación,
+              ayudamos a reducir el impacto negativo que generan el uso de
+              combustibles fosiles entregando a esta estructura electricidad
+              limpia que requiere En resumen con este proyecto logramos aportar
+              en fomentar el uso de leña seca que daña menos al medio ambiente
+              que la leña húmeda.
+            </p>
+          </div>
+        </div>
+
+        <div class="proyecto">
+          <h3 class="titulo-proyecto">
+            Instalacion fotovoltaica OFF-GRID en Pid Pid, Castro, Chiloe
+          </h3>
+          <div class="contenido-proyecto">
+            <div class="imagen-proyecto">
+              <img src="/img/instalacion 2.png" alt="" />
+            </div>
+            <p class="parrafo-proyecto">
+              Este proyecto como podemos apreciar. Es una instalación que
+              funciona mediante paneles fotovoltaicos. Otorgamos energía a focos
+              exteriores que iluminan caminos rurales durante la noche. Los
+              paneles solares almacenan dicha energía en baterías de gel de
+              ciclo profundo. Optamos por el uso de estas baterías porque logran
+              el mayor porcentaje de eficiencia acumulando suficiente energía
+              durante el día para mantener el foco encendido toda la noche.
             </p>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <div id="contacto" class="contacto">
       <div class="container">
