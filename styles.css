@@ -2,7 +2,9 @@
   --blanco-1: 11, 1%, 94%;
   --blanco-2: 11, 1%, 74%;
   --fondo-hueso: #f0ecec;
+  --fondo-hueso-transparente: hsla(0, 11%, 93%, 0.935);
   --color-empresarial: #069898;
+  --color-empresarial-anticontraste: hsl(180, 90%, 35%);
   --color-facebook: #4267b2;
   --color-instagram: radial-gradient(
     circle at 30% 107%,
@@ -35,7 +37,9 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul,
+li {
   padding: 0;
   margin: 0;
   /* font-family: var(--ruluko); */
@@ -54,9 +58,58 @@ img {
 
 .container {
   margin: 0 auto;
-  width: 95vw;
+  width: 90vw;
 }
 /* ---Fin Globales--- */
+
+/* carga */
+
+.pantalla-carga {
+  position: fixed;
+  z-index: 999;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--color-empresarial-anticontraste);
+}
+
+.pantalla-carga h1,
+.pantalla-carga h2,
+.pantalla-carga h3 {
+  color: #fff;
+}
+
+.pantalla-carga::before {
+  content: "MAS Energías Renovables";
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.carga-completa {
+  /* background-color: red; */
+  transition: transform 500ms ease-in-out;
+  transform: rotateX(90deg);
+}
+
+.cambio-pantalla {
+}
+
+/* @keyframes{
+  from{
+
+  }
+
+  to{
+
+  }
+
+
+} */
 
 /* Botones */
 
@@ -76,7 +129,7 @@ img {
 
 .btn-empresarial {
   color: #fff;
-  background-color: var(--color-empresarial);
+  background-color: var(--color-empresarial-anticontraste);
 }
 
 .resalta {
@@ -119,7 +172,7 @@ img {
 
 .mobile-header {
   display: block;
-  background-color: var(--color-empresarial);
+  background-color: var(--color-empresarial-anticontraste);
   position: fixed;
   top: 0%;
   width: 100%;
@@ -164,7 +217,7 @@ img {
   width: 12rem;
   height: auto;
   z-index: 10;
-  background-color: var(--color-empresarial);
+  background-color: var(--color-empresarial-anticontraste);
 }
 
 .hamburger-navbar > ul {
@@ -198,25 +251,81 @@ img {
   }
 }
 
-.homepage {
-  width: 100%;
+.main-header {
+  display: flex;
+  flex-direction: column;
+
+  max-height: 100vh;
+  min-height: 40rem;
   height: 100vh;
-  background: url(img/panel_solar_0.jpg);
-  background-position: center center;
-  background-size: cover;
+  /* overflow: hidden; */
 }
 
-.homepage > .container {
+.homepage {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 100%;
+
+  /* width: 100%; */
+  height: 100vh;
+  background: url(img/panel_solar_0.jpg);
+  /* background-image: linear-gradient(to bottom, hsla(60, 1%, 26%, 0.192), hsla(241, 50%, 50%, 0.801)), url(img/panel_solar_0.jpg); */
+  background-position: center center;
+  background-size: cover;
 }
+
+/* .homepage::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: hsla(0, 2%, 65%, 0.432); 
+  z-index: 1;
+
+} */
 
 .homepage-headline h2 {
   text-align: center;
-  font-size: 1.1rem;
+  color: #fff;
+  letter-spacing: -1px;
+  text-shadow: rgb(59, 123, 219) 0px 0px 10px, rgb(1, 160, 252) 0px 0px 5px;
+  font-size: 2rem;
+}
+
+.icono-bajar.fas.fa-angle-double-down {
+  position: fixed;
+  bottom: 4%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+
+  font-size: 5.5rem;
+  color: var(--color-empresarial-anticontraste);
+  animation: anim-bajar 1.5s infinite;
+  transition: all 300ms ease-in-out;
+}
+
+.bajar {
+}
+
+@keyframes anim-bajar {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  50% {
+    bottom: 0%;
+    opacity: 0.7;
+  }
+
+  100% {
+    bottom: 0%;
+    opacity: 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -231,6 +340,9 @@ img {
 
   .desktop-header {
     display: block;
+    flex: 0 0 auto;
+    /* min-height: 15vh; */
+    /* max-height: 20vh; */
   }
 
   .desktop-header > .container {
@@ -240,7 +352,7 @@ img {
   }
 
   .desktop-header > .container > .logo {
-    width: 12rem;
+    flex: 0 1 12rem;
   }
 
   .desktop-header > .container > .contact-info {
@@ -296,12 +408,13 @@ img {
   }
 
   .desktop-nav {
+    flex: 0 0 auto;
     display: block;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+    /* position: -webkit-sticky; */
+    /* position: sticky; */
+    /* top: 0; */
     z-index: 10;
-    background-color: var(--color-empresarial);
+    background-color: var(--color-empresarial-anticontraste);
   }
 
   .sticky-navbar {
@@ -309,6 +422,14 @@ img {
     top: 0;
     z-index: 10;
     width: 100%;
+  }
+
+  .sticky-navbar + .homepage {
+    margin-top: 41px;
+  }
+
+  .sticky-navbar + .historia {
+    margin-top: 41px;
   }
 
   .desktop-nav > .container {
@@ -335,21 +456,22 @@ img {
     background-color: #fff;
   }
 
-  /* .social-media{
-
-    color: var(--color-empresarial);
-    font-size: 2rem;
-    cursor: pointer;
-    margin: 0 0.05rem;
-
-} */
-
   .homepage {
-    height: 80vh;
+    flex: 1 0 auto;
+    height: auto;
   }
 
   .homepage-headline h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+
+
+
+  }
+
+  .homepage-headline h2 {
+    letter-spacing: -2px;
+    /* text-shadow: rgb(59, 123, 219) 0px 0px 10px, rgb(1, 160, 252) 0px 0px 5px; */
+    /* font-size: 1.1rem; */
   }
 }
 
@@ -364,12 +486,14 @@ img {
 }
 
 .historia .container {
-  padding: 0.5rem 0.3rem;
+  padding: 3.5rem 0.3rem 0rem 0.3rem;
   /* border-radius: 1rem; */
   background-color: var(--fondo-hueso);
 }
 
-.historia p {
+.empresa p,
+.vision p,
+.mision p {
   font-size: 1rem;
   line-height: 1.3rem;
 }
@@ -385,7 +509,7 @@ img {
 
 .mision {
   margin-top: 1rem;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .mision > h3 {
@@ -394,11 +518,17 @@ img {
 
 .vision {
   margin-top: 1rem;
-  text-align: center;
+  /* text-align: center; */
 }
+
 
 .vision > h3 {
   margin-bottom: 0.5rem;
+}
+
+.vision ul{
+  margin-left: 2rem;
+  font-size: 1rem;
 }
 
 .vision + h2 {
@@ -418,9 +548,20 @@ img {
   .empresa > h2 {
     font-size: 1.8rem;
   }
-  .historia p {
+  .historia p,
+  .mision p,
+  .vision p {
     font-size: 1.2rem;
     line-height: 1.8rem;
+  }
+
+  .vision ul{
+    font-size: 1.2rem;
+  }
+
+  .vision + h2 {
+    margin: 2rem 0 1rem 0;
+    text-align: center;
   }
 }
 /* -------- */
@@ -432,8 +573,7 @@ img {
   padding: 1rem 0;
 }
 
-.servicios p{
-
+.servicios p {
   font-size: 1rem;
   line-height: 1.3rem;
 }
@@ -448,7 +588,7 @@ img {
 }
 
 .icono-servicio {
-  width: 50%;
+  width: 10rem;
   margin-bottom: 2rem;
   transition: transform 0.3s ease;
 }
@@ -457,17 +597,17 @@ img {
   transform: scale(1.05);
 }
 /* deprecated */
-.icono-servicios {
+/* .icono-servicios {
   color: var(--color-empresarial);
   font-size: 7rem;
   margin-bottom: 2rem;
-}
+} */
 
 .servicios-wrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
 }
 
@@ -477,12 +617,12 @@ img {
   justify-content: center;
   align-items: center;
 
-  padding: 2rem 1rem;
-  margin: 0 1rem;
+  padding: 2rem 2.5rem;
+  margin: 0;
   min-height: 17rem;
-  flex: 0 1 15rem;
+  flex: 0 1 20rem;
 
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   /* border: 2px solid #000 */
   /* height: ; */
   border-radius: 20px;
@@ -499,8 +639,7 @@ img {
     padding: 2rem 0;
   }
 
-  .servicios p{
-
+  .servicios p {
     font-size: 1.2rem;
     line-height: 1.5rem;
   }
@@ -513,11 +652,15 @@ img {
     flex-direction: row;
   }
 
+  .icono-servicio {
+    width: 13rem;
+  }
+
   .caja-servicio {
     padding: 2rem 2rem;
     margin: 0 1rem;
-    min-height: 25rem;
-    flex: 0 1 25vw;
+    min-height: 24rem;
+    flex: 0 1 22vw;
 
     margin-bottom: 2rem;
     /* border: 2px solid #000; */
@@ -531,7 +674,6 @@ img {
 /* Proyectos */
 
 .proyectos {
-
   padding: 1rem 0;
   background: url("/img/bosque.jpg");
   background-position: center center;
@@ -540,83 +682,71 @@ img {
 }
 
 .proyecto {
-
   margin: 1rem 0;
   width: 100%;
-  background-color: var(--fondo-hueso);
+  /* background-color: var(--fondo-hueso); */
+  /* background-color: rgba(224, 222, 222, 0.945); */
+  background-color: var(--fondo-hueso-transparente);
   border-radius: 20px;
 }
 
 .titulo-proyecto {
-
-  border-top-left-radius: 20px ;
-    border-top-right-radius: 20px ;
-    padding: 0.5rem 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 0.5rem 0;
   text-align: center;
-  background-color:rgb(172, 169, 169);
+  color: #fff;
+  background-color: var(--color-empresarial-anticontraste);
 }
 
-.contenido-proyecto{
+.contenido-proyecto {
   display: flex;
   flex-direction: column;
   justify-items: flex-start;
   align-items: center;
-
 }
 
-.parrafo-proyecto{
+.parrafo-proyecto {
   /* width:  calc(50% - 1rem); */
   padding: 1rem 1rem;
   font-size: 1rem;
 }
 
-.imagen-proyecto{
+.imagen-proyecto {
   /* width:  calc(50% - 1rem); */
 }
 
-
 @media (min-width: 768px) {
-
-
   .proyectos {
     padding: 1rem 0;
-
-
   }
-  
+
   .proyecto {
     margin: 1rem 0;
-  
-
   }
-  
+
   .titulo-proyecto {
     padding: 0.5rem 0;
   }
 
-
-  
-  .contenido-proyecto{
+  .contenido-proyecto {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-
   }
 
-  .parrafo-proyecto{
-    padding: 4rem 1rem 0rem 1rem;
-    width:  calc(50% - 1rem);
+  .parrafo-proyecto {
+    padding: 6rem 3rem 0rem 3rem;
+    width: 60%;
     line-height: 1.8rem;
     font-size: 1.2rem;
   }
 
-  .imagen-proyecto{
-    width:  calc(50% - 1rem);
+  .imagen-proyecto {
+    width: 40%;
+    display: flex;
+    justify-content: center;
   }
-
-
-
-
 }
 
 /* Fin Proyectos */
@@ -659,14 +789,25 @@ img {
   width: 100%;
 }
 
+.formulario-contacto a{
+
+  color: var(--color-empresarial-anticontraste);
+  text-decoration: none;
+}
+
+.formulario-contacto span{
+  color: var(--color-empresarial-anticontraste);
+}
+
 .formulario-contacto input {
   display: block;
   height: 3rem;
   width: 100%;
   margin: 0.3rem 0;
   font-size: 1.4rem;
+  resize: none;
   padding: 0.5rem;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   font-family: inherit;
 }
 
@@ -677,7 +818,8 @@ img {
   font-size: 1.4rem;
   padding: 0.5rem;
   margin: 0.3rem 0;
-  border-radius: 5px;
+  resize: none;
+  /* border-radius: 5px; */
   font-family: inherit;
 }
 
@@ -686,10 +828,11 @@ img {
   width: 100%;
   cursor: pointer;
   font-size: 1.4rem;
-  border-radius: 5px;
+  /* border-radius: 20px; */
+  /* outline: hsl(234, 60%, 53%) double 2rem; */
   color: #fff;
   padding: 0.5rem;
-  background-color: var(--color-empresarial);
+  background-color: var(--color-empresarial-anticontraste);
   font-family: inherit;
 }
 
@@ -734,7 +877,7 @@ img {
 /* Fin contacto */
 
 .site-footer {
-  background-color: var(--color-empresarial);
+  background-color: var(--color-empresarial-anticontraste);
   padding: 1rem 0;
   /* height: 20vh; */
 }

@@ -14,83 +14,88 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body id="inicio">
-    <header class="desktop-header">
-      <div class="container">
-        <div class="logo"><img src="img/logo1.jpg" alt="" /></div>
-        <div class="contact-info">
-          <h2>Si tienes dudas, contáctanos!</h2>
-          <h2 class="fono">
-            <a
-              target="_blank"
-              href="https://wa.me/56952516403?text=Algun%20mensaje%20aqui"
-              >+56952516403<i class="social-media fab fa-whatsapp"></i
-            ></a>
-          </h2>
+  <body>
+    <div class="pantalla-carga"></div>
+    <header class="main-header">
+      <div class="desktop-header">
+        <div class="container">
+          <div class="logo"><img src="img/logo1.jpg" alt="" /></div>
+          <div class="contact-info">
+            <h2>Si tienes dudas, contáctanos!</h2>
+            <h2 class="fono">
+              <a
+                target="_blank"
+                href="https://wa.me/56952516403?text=Algun%20mensaje%20aqui"
+                >+56952516403<i class="social-media fab fa-whatsapp"></i
+              ></a>
+            </h2>
 
-          <div class="social-media-wrapper">
-            <a
-              href="https://www.facebook.com/MASenergiasrenovables/"
-              target="_blank"
-              ><i class="social-media fab fa-facebook-square"></i
-            ></a>
-            <a
-              href="https://www.instagram.com/masenergiasrenovables/"
-              target="_blank"
-              ><i class="social-media fab fa-instagram"></i
-            ></a>
+            <div class="social-media-wrapper">
+              <a
+                href="https://www.facebook.com/MASenergiasrenovables/"
+                target="_blank"
+                ><i class="social-media fab fa-facebook-square"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/masenergiasrenovables/"
+                target="_blank"
+                ><i class="social-media fab fa-instagram"></i
+              ></a>
+            </div>
           </div>
         </div>
       </div>
-    </header>
 
-    <header class="mobile-header">
-      <div class="container">
-        <h2 class="logo">MAS Energías Renovables</h2>
+      <div class="mobile-header">
+        <div class="container">
+          <h2 class="logo">MAS Energías Renovables</h2>
 
-        <div class="hamburger-menu">
-          <span></span>
-          <span></span>
-          <span></span>
+          <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="hamburger-navbar">
+          <ul>
+            <li class="nav-item">
+              <a id="mb-inicio" href="#" class="nav-link">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a id="mb-servicios" href="#" class="nav-link">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a id="mb-somos" href="/quienessomos.html" class="nav-link"
+                >Quienes Somos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a id="mb-proyectos" href="#" class="nav-link">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a id="mb-contacto" href="#" class="nav-link">Contacto</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="hamburger-navbar">
-        <ul>
-          <li class="nav-item">
-            <a id="mb-inicio" href="#" class="nav-link">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a id="mb-servicios" href="#" class="nav-link">Servicios</a>
-          </li>
-          <li class="nav-item">
-            <a id="mb-somos" href="/quienessomos.html" class="nav-link"
-              >Quienes Somos</a
-            >
-          </li>
-          <li class="nav-item">
-            <a id="mb-proyectos" href="#" class="nav-link">Proyectos</a>
-          </li>
-          <li class="nav-item">
-            <a id="mb-contacto" href="#" class="nav-link">Contacto</a>
-          </li>
-        </ul>
-      </div>
-    </header>
 
-    <nav class="desktop-nav">
-      <div class="container">
-        <a id="dk-inicio" href="">Inicio</a>
-        <a id="dk-servicios" href="#servicios">Servicios</a>
-        <a id="dk-somos" href="/quienessomos.html">Quienes Somos</a>
-        <a id="dk-proyectos" href="#">Proyectos</a>
-        <a id="dk-contacto" href="#contacto">Contacto</a>
-      </div>
-    </nav>
-    <section class="homepage">
-      <div class="container">
+      <nav class="desktop-nav">
+        <div class="container">
+          <a id="dk-inicio" href="">Inicio</a>
+          <a id="dk-servicios" href="#servicios">Servicios</a>
+          <a id="dk-somos" href="/quienessomos.html">Quienes Somos</a>
+          <a id="dk-proyectos" href="#">Proyectos</a>
+          <a id="dk-contacto" href="#contacto">Contacto</a>
+        </div>
+      </nav>
+
+      <section class="homepage">
         <div class="homepage-headline">
-          <h2>Deja tu huella en el medio ambiente</h2>
-          <h2>Energía limpia a bajo costo</h2>
+          <h2>
+            Ayudemos al medio ambiente utilizando energía limpia y libre de
+            emisiones
+          </h2>
+          <h2>Promovamos MAS energías renovables</h2>
         </div>
 
         <div class="resalta call-to-action">
@@ -98,14 +103,14 @@
             >Inicia tu viaje con nosotros!</a
           >
         </div>
-      </div>
-    </section>
+
+        <i class="icono-bajar fas fa-angle-double-down"></i>
+      </section>
+    </header>
 
     <main id="servicios" class="servicios">
       <div class="container">
-        <h2 class="servicios-heading">
-          Nuestros Servicios
-        </h2>
+        <h2 class="servicios-heading">Nuestros Servicios</h2>
         <div class="servicios-wrapper">
           <!-- <div>
             <i class="icono-servicios fas fa-wind"></i>
@@ -123,7 +128,7 @@
 
           <div class="caja-servicio">
             <div class="icono-servicio">
-              <img src="/img/idea.svg" alt="" />
+              <img src="/img/destacar.svg" alt="" />
             </div>
             <p>
               Instalación de focos interiores o exteriores con paneles
@@ -143,7 +148,7 @@
 
           <div class="caja-servicio">
             <div class="icono-servicio">
-              <img src="/img/molino-de-viento.svg" alt="" />
+              <img src="/img/3304930.svg" alt="" />
             </div>
             <p>
               Implementación de turbinas eólicas para usos industriales o
@@ -217,7 +222,7 @@
           </h3>
           <div class="contenido-proyecto">
             <div class="imagen-proyecto">
-              <img src="/img/instalacion 2.png" alt="" />
+              <img src="/img/panel-hogar.png" alt="" />
             </div>
             <p class="parrafo-proyecto">
               Este proyecto como podemos apreciar. Es una instalación que
@@ -240,7 +245,7 @@
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23538.5720824213!2d-73.77026448335803!3d-42.48471699900906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96223cfcf1a3a9c5%3A0xabd8bf191d3a5cff!2sCastro%2C%20Los%20Lagos!5e0!3m2!1ses!2scl!4v1597064126631!5m2!1ses!2scl"
               frameborder="0"
-              style="border: 0;"
+              style="border: 0"
               allowfullscreen=""
               aria-hidden="false"
               tabindex="0"
@@ -248,7 +253,17 @@
           </div>
         </div>
         <div class="formulario-contacto">
-          <h2 class="center-text">Déjanos tus datos y te contactaremos!</h2>
+
+          <h2>Visita nuestras redes sociales!</h2>
+          <h2>Facebook: <a class="" href="https://www.facebook.com/MASenergiasrenovables/">/MASenergiasrenovables</a></h2>
+          <h2>Instagram: <a class="" href="https://www.instagram.com/masenergiasrenovables/">@masenergiasrenovables</a></h2>
+          <h2>También contáctanos a través de Whatsapp: <a
+            target="_blank"
+            href="https://wa.me/56952516403?text=Algun%20mensaje%20aqui"
+            >+56952516403</a></h2>
+          <h2>O por correo electrónico en <span>masenergiasrenovables@gmail.com</span></h2>
+          <h2>Déjanos tus datos y te contactaremos!</h2>
+
           <form class="" action="">
             <input name="nombre" type="text" placeholder="Tu nombre..." />
             <input name="email" type="email" placeholder="Tu email..." />
@@ -297,7 +312,7 @@
     <div class="firma-dev">
       <h5>
         Desarrollado por
-        <a target="_blank" href="https://www.acabret.cl">acabret.cl</a>
+        <a target="_blank" href="https://www.acabret.com">acabret.com</a>
       </h5>
     </div>
 
@@ -305,6 +320,7 @@
       src="https://kit.fontawesome.com/2b62244762.js"
       crossorigin="anonymous"
     ></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
